@@ -55,9 +55,7 @@ class _MyParcelDeliveryMethodState extends State<MyParcelDeliveryMethod> {
                   ),
                 ),
               ),
-              const SizedBox(
-                width: 34,
-              ),
+              const SizedBox(width: 34,),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -93,21 +91,15 @@ class _MyParcelDeliveryMethodState extends State<MyParcelDeliveryMethod> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(
-            height: 16,
-          ),
+          const SizedBox(height: 16,),
           Text(
             'Recipient Info',
             style: Theme.of(context).textTheme.headline5,
           ),
-          const SizedBox(
-            height: 16,
-          ),
+          const SizedBox(height: 16,),
           Row(
             children: [
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10,),
               Text(
                 'Name',
                 style: Theme.of(context).textTheme.headline6,
@@ -117,14 +109,10 @@ class _MyParcelDeliveryMethodState extends State<MyParcelDeliveryMethod> {
           TextField(
             onChanged: (value) {},
           ),
-          const SizedBox(
-            height: 16,
-          ),
+          const SizedBox(height: 16,),
           Row(
             children: [
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10,),
               Text(
                 'Email',
                 style: Theme.of(context).textTheme.headline6,
@@ -134,9 +122,7 @@ class _MyParcelDeliveryMethodState extends State<MyParcelDeliveryMethod> {
           TextField(
             onChanged: (value) {},
           ),
-          const SizedBox(
-            height: 16,
-          ),
+          const SizedBox(height: 16,),
           Row(
             children: [
               const SizedBox(
@@ -151,14 +137,10 @@ class _MyParcelDeliveryMethodState extends State<MyParcelDeliveryMethod> {
           TextField(
             onChanged: (value) {},
           ),
-          const SizedBox(
-            height: 16,
-          ),
+          const SizedBox(height: 16,),
           Row(
             children: [
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10,),
               Text(
                 'Address',
                 style: Theme.of(context).textTheme.headline6,
@@ -168,9 +150,7 @@ class _MyParcelDeliveryMethodState extends State<MyParcelDeliveryMethod> {
           TextField(
             onChanged: (value) {},
           ),
-          const SizedBox(
-            height: 16,
-          ),
+          const SizedBox(height: 16,),
         ],
       ),
     );
