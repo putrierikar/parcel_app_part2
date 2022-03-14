@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:parcel_app_part2/parcel_app_theme.dart';
-import 'package:parcel_app_part2/ui/screens/home_screen.dart';
+import 'package:parcel_app_part2/ui/screens/screens.dart';
 import 'package:parcel_app_part2/ui/widgets/widgets.dart';
 
 class App extends StatelessWidget {
@@ -12,9 +12,12 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ParcelAppTheme.lightTheme,
-      home: Scaffold(
-        body: HomeScreen(),
-        bottomNavigationBar: const MyBottomNavigationBar(),
+      home: const Scaffold(
+        //body: HomeScreen(),
+        //body: SendParcelScreen(),
+        //body: SendParcelDetailScreen(),
+        body: SendParcelCheckoutScreen(),
+        bottomNavigationBar: MyBottomNavigationBar(),
       ),
     );
   }

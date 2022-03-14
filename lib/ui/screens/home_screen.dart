@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parcel_app_part2/ui/widgets/widgets.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({ Key? key }) : super(key: key);
@@ -26,14 +25,11 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             centerTitle: false,
             floating: true,
-            snap: false,
-            pinned: true,
+            snap: true,
             titleSpacing: 0,
             actions: [
               Padding(
-                padding: const EdgeInsets.only(
-                  right: 24,
-                ),
+                padding: const EdgeInsets.only(right: 24,),
                 child: CircleAvatar(
                   child: ClipOval(
                     child: Image.network('https://i.mydramalist.com/j4QWvc.jpg'),
@@ -76,6 +72,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               children: [
                                 Expanded(
                                   child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 16
+                                    ),
                                     height: 49,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(4),
@@ -89,16 +88,21 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                                 const SizedBox(width: 8,),
-                                Container(
-                                  padding: const EdgeInsets.all(14),
-                                  width: 50,
-                                  height: 49,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(4),
-                                    color: Theme.of(context).backgroundColor,
-                                  ),
-                                  child: SvgPicture.asset(
-                                    'assets/images/icon_qrcode.svg',
+                                GestureDetector(
+                                  onTap: (){
+                                    print('Scan object pressed!');
+                                  },
+                                  child: Container(
+                                    padding: const EdgeInsets.all(14),
+                                    width: 50,
+                                    height: 49,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(4),
+                                      color: Theme.of(context).backgroundColor,
+                                    ),
+                                    child: SvgPicture.asset(
+                                      'assets/images/icon_qrcode.svg',
+                                    ),
                                   ),
                                 ),
                             ]),
@@ -107,7 +111,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             height: 48, 
                             width: double.infinity,
                             child: TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                print('button pressed');
+                              },
                               child: Text(
                                 'Track parcel',
                                 style: Theme.of(context).textTheme.bodyText1,
@@ -238,9 +244,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   ]),
                 ),
               );
-            }),
+            },
+            childCount: 20,
           ),
-        ],
-      );
+        ),
+      ],
+    );
   }
 }
